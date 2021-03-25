@@ -41,6 +41,23 @@ class LinkedList:
         new_node.next_node = self.head
         self.head = new_node
 
+    def __repr__(self):
+        """ Return a string representation if the list
+         Takes O(n) - linear time """
+
+        nodes = []
+        current = self.head
+
+        while current:
+            if current is self.head:
+                nodes.append("[Head: %s]" % current.data)
+            elif current.next_node is None:
+                nodes.append("[Tail: %s]" % current.data)
+            else:
+                nodes.append("[%s]" % current.data)
+
+            current = current.next_node
+        return '-> '.join(nodes)
 
 
 l = LinkedList()
@@ -48,7 +65,7 @@ l.add(1)
 l.add(2)
 l.add(3)
 #l.head = N1
-print(l.size())
+print(l)
 
 #N2 = Node(20)
 #N1.next_node = N2
