@@ -5,10 +5,10 @@ This repo contains snippets from learning and practice lessons
 Programming for Data Science with Python
 
 ### Date created
-linear_search.py - March 23, 2021
-binary_search.py - March 23, 2021  
-recursive_binary_search.py - March 23, 2021
-linked_list.py - March 24, 2021
+linear_search.py - March 23, 2021  
+binary_search.py - March 23, 2021    
+recursive_binary_search.py - March 23, 2021  
+linked_list.py - March 24, 2021  
 merge_sort.py - March 25, 2021
 
 ### Software versions
