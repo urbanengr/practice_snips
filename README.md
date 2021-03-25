@@ -8,7 +8,7 @@ Programming for Data Science with Python
 linear_search.py - March 23, 2021  
 binary_search.py - March 23, 2021    
 recursive_binary_search.py - March 23, 2021  
-linked_list.py - March 24, 2021  
+linked_list.py - March 24, 2021 (major change - March 25, 2021)  
 merge_sort.py - March 25, 2021
 
 ### Software versions
