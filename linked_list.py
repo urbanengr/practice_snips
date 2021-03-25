@@ -33,10 +33,21 @@ class LinkedList:
 
         return count
 
+    def add(self, data):
+        """ Adds a new node containing data at the head of the list.
+         This takes O(1) - constant time """
+
+        new_node = Node(data)
+        new_node.next_node = self.head
+        self.head = new_node
+
+
 
 l = LinkedList()
-N1 = Node(10)
-l.head = N1
+l.add(1)
+l.add(2)
+l.add(3)
+#l.head = N1
 print(l.size())
 
 #N2 = Node(20)
