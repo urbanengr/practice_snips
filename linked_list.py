@@ -41,6 +41,22 @@ class LinkedList:
         new_node.next_node = self.head
         self.head = new_node
 
+    def search(self, key):
+        """ Search for the first node containing data that matches the key
+         Return the node or 'None' if not found
+
+          This takes 0(n) - linear time """
+
+        current = self.head
+
+        while current:
+            if current.data == key:
+                return current
+            else:
+                current = current.next_node
+        return None
+
+
     def __repr__(self):
         """ Return a string representation if the list
          Takes O(n) - linear time """
@@ -60,11 +76,15 @@ class LinkedList:
         return '-> '.join(nodes)
 
 
+
+
 l = LinkedList()
-l.add(1)
+l.add(10)
 l.add(2)
-l.add(3)
-#l.head = N1
+l.add(45)
+l.add(15)
+
+print(l.search(45))
 print(l)
 
 #N2 = Node(20)
