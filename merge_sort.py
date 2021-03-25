@@ -7,8 +7,8 @@ def merge_sort(list):
     Combine: Merge the sorted sublists created in previous step
     """
 
-    if len(list) <= 1:      #check for single or no element list
-        return list         #if single or no element no sort needed, return list
+    if len(list) <= 1:
+        return list
 
     left_half, right_half = split(list)
     left = merge_sort(left_half)
@@ -21,7 +21,7 @@ def split(list):
     """ Divide the unsorted list at midpoint into sublists.
      Returns two sublists - left and right """
 
-    mid = len(list)//2      #use floor function to find midpoint of list
+    mid = len(list)//2
     left = list[:mid]
     right = list[mid:]
 
@@ -33,30 +33,41 @@ def merge(left, right):
       Returns a new merged list"""
 
     l = []
-    i = 0           #tracks left list indices
-    j = 0           #tracks right list indices
+    i = 0
+    j = 0
 
     while i < len(left) and j < len(right):
-        if left[i] < right[j]:      #if element in right half is greater
-            l.append(left[i])       #move to end of left half
+        if left[i] < right[j]:
+            l.append(left[i])
             i += 1
         else:
-            l.append(right[j])      #move left element to end of right half
+            l.append(right[j])
             j += 1
 
-    """ Create while loops to catch uneven halves that will cause above loop to end"""
-
-    while i < len(left):            #if right half is shorter than left
-        l.append(left[i])           #assumes elements are sorted
+    """ Create two while loops to catch uneven halves that will cause above loop to end"""
+    while i < len(left):
+        l.append(left[i])
         i += 1
 
-    while j < len(right):        #for left half is shorter than right
-        l.append(right[j])          #assumes elements are sorted
+    while j < len(right):
+        l.append(right[j])
         j += 1
 
     return l
 
+
+def verify_sorted(list):
+    """confirms list is sorted without visual inspection"""
+
+    n = len(list)
+
+    if n == 0 or n ==1:
+        return True
+
+    return (list[0] < list[1]) and verify_sorted(list[1:])
+
 alist = [54, 26, 62, 45, 74, 3, 20, 25, 1]
 l = merge_sort(alist)
-print(l)
+print(verify_sorted(alist))
+print(verify_sorted(l))
 
