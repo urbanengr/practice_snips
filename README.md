@@ -67,4 +67,5 @@ return (list[0] < list[1]) and verify_sorted(list[1:])	#uses recursion
 
 ### Credits
 Youtube video - "Algorithms and Data Structures - Full Course for Beginners from Treehouse", posted March 18, 2021
+Also using file for testing in Cloud Developer course
 
